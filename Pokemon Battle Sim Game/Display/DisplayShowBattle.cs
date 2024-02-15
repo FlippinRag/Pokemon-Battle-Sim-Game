@@ -1,0 +1,70 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Pokemon_Battle_Sim_Game.Battle;
+using Pokemon_Battle_Sim_Game.Battle.Phases;
+using Pokemon_Battle_Sim_Game.Battle.Phases.TrainerPhases;
+using Pokemon_Battle_Sim_Game.Services.Content;
+using Pokemon_Battle_Sim_Game.Services.DialogBox;
+
+namespace Pokemon_Battle_Sim_Game.Display
+{
+    public class DisplayShowBattle : Display
+    {
+        private IContentLoader contentLoader;
+        private readonly IDialogBoxQueuer dialogBoxQueuer;
+        private IPhase currentPhase;
+        private readonly BattleData battleData;
+        private readonly DialogBoxBattle dialogBoxBattle;
+        private Texture2D backgroundTexture;
+        public SpriteFont Font { get; set; }
+        private bool drawPlainMessages;
+
+        public DisplayShowBattle(IDialogBoxQueuer dialogBoxQueuer, IPhase startPhase, BattleData battleData)
+        {
+            this.dialogBoxQueuer = dialogBoxQueuer;
+            this.battleData = battleData;
+            currentPhase = startPhase;
+            dialogBoxBattle = new DialogBoxBattle(new Vector2(-30, 98), 300, 80);
+            drawPlainMessages = false;
+        }
+
+        public override void LoadContent(IContentLoader contentLoader)
+        {
+            backgroundTexture = contentLoader.LoadTexture("Battle/Backgrounds/background");
+            dialogBoxBattle.LoadContent(contentLoader);
+            currentPhase.LoadContent(contentLoader, dialogBoxQueuer, battleData);
+            this.contentLoader = contentLoader;
+            Font = contentLoader.LoadFont("PokemonFont");
+        }
+
+        public override void Update(double gameTime)
+        {
+            currentPhase.Update(gameTime);
+            if (!currentPhase.IsDone) return;
+            currentPhase = currentPhase.GetNextPhase();
+            currentPhase.LoadContent(contentLoader, dialogBoxQueuer, battleData);
+
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(backgroundTexture, new Rectangle(0, -20, 240, 160), Color.White);
+            currentPhase.Draw(spriteBatch, null);
+            dialogBoxBattle.Draw(spriteBatch);
+            
+            // Draw plain messages if drawPlainMessages is true
+            if (currentPhase is PlayerMessagePhase playerMessagePhase && playerMessagePhase.IsDone)
+            {
+                DrawPlainMessages(spriteBatch, Font);
+            }
+        }
+
+        // Method to draw plain messages
+        private static void DrawPlainMessages(SpriteBatch spriteBatch, SpriteFont font)
+        {
+            spriteBatch.DrawString(font, "What is your action?", new Vector2(0, 130), Color.Black);
+            spriteBatch.DrawString(font, "1. Fight", new Vector2(0, 140), Color.Black);
+            spriteBatch.DrawString(font, "2. Run", new Vector2(0, 150), Color.Black);
+        }
+    }
+}

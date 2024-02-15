@@ -1,0 +1,58 @@
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Pokemon Battle Sim Game.exe
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Pokemon Battle Sim Game.deps.json
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Pokemon Battle Sim Game.runtimeconfig.json
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Pokemon Battle Sim Game.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Pokemon Battle Sim Game.pdb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.csproj.AssemblyReference.cache
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.AssemblyInfoInputs.cache
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.AssemblyInfo.cs
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.csproj.CoreCompileInputs.cache
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.csproj.CopyComplete
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\refint\Pokemon Battle Sim Game.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.pdb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.genruntimeconfig.cache
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\ref\Pokemon Battle Sim Game.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Backgrounds\background.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\BattleNumberOfPokemons.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\enemybox.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\HealthBar.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\playerbox.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusBoxTrainer.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusPokemonBallDead.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusPokemonBallNormal.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusPokemonBallStatusEffect.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Pokeballs\pokeball_open_effect.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Battle\Pokeballs\pokeball_regular.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\NotfoundTexture.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Litten.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Pikachu.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Togepi.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Weedle.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Bulbasaur.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Charmander.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Riolu.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Squirtle.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\ScreenEffects\white_block.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Trainers\bug_catcher.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Trainers\teamRocket.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Trainers\trainer_back.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Trainers\trainer_back_single.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Windows\DialogBox.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Windows\message_arrow.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Windows\windowBattleFrame.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Textures\Windows\windowframe.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Fonts\NotFoundFont.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Fonts\PokemonBattleFont.xnb
+C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\bin\Debug\net6.0\Content\Fonts\PokemonFont.xnb

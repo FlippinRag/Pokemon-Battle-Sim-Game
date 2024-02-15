@@ -1,0 +1,173 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <RollForward>Major</RollForward>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <TieredCompilation>false</TieredCompilation>
+    </PropertyGroup>
+    <PropertyGroup>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <ApplicationIcon>Icon.ico</ApplicationIcon>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Remove="Icon.ico"/>
+        <None Remove="Icon.bmp"/>
+        <None Include="C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\Content\Content.mgcb" />
+        <Content Include="bin\Debug\net6.0\Content\Fonts\NotFoundFont.xnb">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="bin\Debug\net6.0\Content\Fonts\PokemonBattleFont.xnb">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="bin\Debug\net6.0\Content\Fonts\PokemonFont.xnb">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Include="C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\Content\obj\DesktopGL\net6.0\Content\.mgstats" />
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Icon.ico"/>
+        <EmbeddedResource Include="Icon.bmp"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303"/>
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Backgrounds\background.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\BattleNumberOfPokemons.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\enemybox.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\HealthBar.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\playerbox.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusBoxTrainer.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusPokemonBallDead.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusPokemonBallNormal.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Gui\StatusPokemonBallStatusEffect.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Pokeballs\pokeball_open_effect.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Battle\Pokeballs\pokeball_regular.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\NotfoundTexture.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Litten.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Pikachu.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Togepi.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Weedle.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Bulbasaur.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Charmander.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Riolu.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Squirtle.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\ScreenEffects\white_block.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Trainers\bug_catcher.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Trainers\teamRocket.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Trainers\trainer_back.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Trainers\trainer_back_single.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Windows\DialogBox.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Windows\message_arrow.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Windows\windowBattleFrame.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Windows\windowframe.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\MonoGame.Framework.dll" />
+      <Content Include="bin\Debug\net6.0\Pokemon Battle Sim Game.deps.json" />
+      <Content Include="bin\Debug\net6.0\Pokemon Battle Sim Game.dll" />
+      <Content Include="bin\Debug\net6.0\Pokemon Battle Sim Game.exe" />
+      <Content Include="bin\Debug\net6.0\Pokemon Battle Sim Game.pdb" />
+      <Content Include="bin\Debug\net6.0\Pokemon Battle Sim Game.runtimeconfig.json" />
+      <Content Include="bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1" />
+      <Content Include="bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0" />
+      <Content Include="bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib" />
+      <Content Include="bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib" />
+      <Content Include="bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll" />
+      <Content Include="bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll" />
+      <Content Include="bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll" />
+      <Content Include="bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll" />
+      <None Remove="Content\Textures\Battle\Backgrounds\background.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\BattleNumberOfPokemons.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\enemybox.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\HealthBar.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\playerbox.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\StatusBoxTrainer.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\StatusPokemonBallDead.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\StatusPokemonBallNormal.xnb" />
+      <None Remove="Content\Textures\Battle\Gui\StatusPokemonBallStatusEffect.xnb" />
+      <None Remove="Content\Textures\Battle\Pokeballs\pokeball_open_effect.xnb" />
+      <None Remove="Content\Textures\Battle\Pokeballs\pokeball_regular.xnb" />
+      <None Remove="Content\Textures\Pokemons\EnemyPokemons\Litten.xnb" />
+      <None Remove="Content\Textures\Pokemons\EnemyPokemons\Pikachu.xnb" />
+      <None Remove="Content\Textures\Pokemons\EnemyPokemons\Togepi.xnb" />
+      <None Remove="Content\Textures\Pokemons\EnemyPokemons\Weedle.xnb" />
+      <None Remove="Content\Textures\Pokemons\PlayerPokemons\Bulbasaur.xnb" />
+      <None Remove="Content\Textures\Pokemons\PlayerPokemons\Charmander.xnb" />
+      <None Remove="Content\Textures\Pokemons\PlayerPokemons\Riolu.xnb" />
+      <None Remove="Content\Textures\Pokemons\PlayerPokemons\Squirtle.xnb" />
+      <None Remove="Content\Textures\ScreenEffects\white_block.xnb" />
+      <None Remove="Content\Textures\Trainers\bug_catcher.xnb" />
+      <None Remove="Content\Textures\Trainers\teamRocket.xnb" />
+      <None Remove="Content\Textures\Trainers\trainer_back.xnb" />
+      <None Remove="Content\Textures\Trainers\trainer_back_single.xnb" />
+      <None Remove="Content\Textures\Windows\DialogBox.xnb" />
+      <None Remove="Content\Textures\Windows\message_arrow.xnb" />
+      <None Remove="Content\Textures\Windows\windowBattleFrame.xnb" />
+      <None Remove="Content\Textures\Windows\windowframe.xnb" />
+      <None Remove="Content\Textures\NotfoundTexture.xnb" />
+    </ItemGroup>
+    <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+        <Message Text="Restoring dotnet tools" Importance="High"/>
+        <Exec Command="dotnet tool restore"/>
+    </Target>
+</Project>

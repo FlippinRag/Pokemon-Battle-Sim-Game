@@ -5,7 +5,7 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 {
     public class DialogPage
     {
-        private const int CharacterDelay = 200;
+        private const int CharacterDelay = 75;
         private readonly SpriteFont font;
         private readonly Color fontColor;
         private readonly string fullText;
@@ -49,7 +49,7 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, fullText.Substring(0, index), position, fontColor);
+            spriteBatch.DrawString(font, fullText[..index], position, fontColor);
         }
     }
 }

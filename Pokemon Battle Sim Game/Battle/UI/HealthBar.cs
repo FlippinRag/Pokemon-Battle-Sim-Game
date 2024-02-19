@@ -13,7 +13,8 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
             YellowState,
             RedState
         };
-        public int CurrentHp { get; private set; }
+
+        private int CurrentHp { get; set; }
 
         private HealthBarState currentHealthBarState;
         private Texture2D hpBarTexture;
@@ -68,6 +69,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
 
         public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
+            // if ()
             spriteBatch.Draw(hpBarTexture, new Rectangle((int)position.X + 44, (int)position.Y + 25, barWidth, 7), new Rectangle(0, 3 * (int)currentHealthBarState, 1, 3), Color.White);
         }
 

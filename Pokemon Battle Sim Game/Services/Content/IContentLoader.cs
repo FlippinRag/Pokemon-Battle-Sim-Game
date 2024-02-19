@@ -6,5 +6,6 @@ namespace Pokemon_Battle_Sim_Game.Services.Content
     {
         Texture2D LoadTexture(string textureName);
         SpriteFont LoadFont(string fontName);
+        void UnloadTexture(string windowsDialogbox);
     }
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Charizard.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Charmeleon.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Dragonite.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Eevee.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Ivysaur.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Jigglypuff.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Lucario.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Magikarp.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Meowth.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Mewtwo.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Moltres.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Psyduck.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Snorlax.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Venusaur.png</File>
+    <File>C:/Users/Anurag Sedai/RiderProjects/Pokemon Battle Sim Game/Pokemon Battle Sim Game/Content/Wartortle.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

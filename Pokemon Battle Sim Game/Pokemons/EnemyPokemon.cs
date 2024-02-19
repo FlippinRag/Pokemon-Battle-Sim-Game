@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json;
 
 namespace Pokemon_Battle_Sim_Game.Pokemons;
@@ -14,8 +15,17 @@ public class EnemyPokemon
     public int EnemyLevel { get; set; }
 
     [JsonProperty("enemyHp")]
-    public int EnemyHp { get; set; }
+    public int EnemyMaxHp { get; set; }
+    
+    public int EnemyCurrentHp { get; set; }
+    
+    public double CalculateDamage(double randomiser)
+    {
+        return Math.Floor(((EnemyMaxHp / 3.0) * 0.6) * randomiser);
+    }
 
-    [JsonProperty("enemySpecialMove")]
-    public string EnemySpecialMove { get; set; }
+    // public bool ShouldUseSpecialMove(double healthPercentage)
+    // {
+    //     return healthPercentage <= 0.15;
+    // }
 }

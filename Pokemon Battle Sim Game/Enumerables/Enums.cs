@@ -2,10 +2,8 @@
 {
     public enum Inputs
     {
-        Box1, 
-        Box2,
-        Box3,
-        Box4,
+        Choice1, 
+        Choice2,
         DownArrow,
         None,
     }

@@ -13,6 +13,9 @@
     <ItemGroup>
         <None Remove="Icon.ico"/>
         <None Remove="Icon.bmp"/>
+        <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Moltres.xnb">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
         <None Include="C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\Content\Content.mgcb" />
         <Content Include="bin\Debug\net6.0\Content\Fonts\NotFoundFont.xnb">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -24,6 +27,9 @@
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
         <None Include="C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\Content\obj\DesktopGL\net6.0\Content\.mgstats" />
+        <None Remove="Content\bin\DesktopGL\Charizard.xnb" />
+        <None Remove="Content\Charizard.png" />
+        <None Remove="Content\bin\DesktopGL\Content\Charizard.xnb" />
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Include="Icon.ico"/>
@@ -71,10 +77,34 @@
       <Content Include="bin\Debug\net6.0\Content\Textures\NotfoundTexture.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Dragonite.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Eevee.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Jigglypuff.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Litten.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Magikarp.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Meowth.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Mewtwo.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Pikachu.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Psyduck.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Snorlax.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\EnemyPokemons\Togepi.xnb">
@@ -86,13 +116,31 @@
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Bulbasaur.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Charizard.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Charmander.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Charmeleon.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Ivysaur.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Lucario.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Riolu.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Squirtle.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Venusaur.xnb">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="bin\Debug\net6.0\Content\Textures\Pokemons\PlayerPokemons\Wartortle.xnb">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="bin\Debug\net6.0\Content\Textures\ScreenEffects\white_block.xnb">

@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Pokemon_Battle_Sim_Game.Battle;
 using Pokemon_Battle_Sim_Game.Battle.Phases;
-using Pokemon_Battle_Sim_Game.Battle.Phases.TrainerPhases;
+using Pokemon_Battle_Sim_Game.Battle.Phases.EnemyPhases;
 using Pokemon_Battle_Sim_Game.Services.Content;
 using Pokemon_Battle_Sim_Game.Services.DialogBox;
 
@@ -53,7 +53,7 @@ namespace Pokemon_Battle_Sim_Game.Display
             dialogBoxBattle.Draw(spriteBatch);
             
             // Draw plain messages if drawPlainMessages is true
-            if (currentPhase is PlayerMessagePhase playerMessagePhase && playerMessagePhase.IsDone)
+            if (currentPhase is StartBattleMessagePhase playerMessagePhase && playerMessagePhase.IsDone)
             {
                 DrawPlainMessages(spriteBatch, Font);
             }

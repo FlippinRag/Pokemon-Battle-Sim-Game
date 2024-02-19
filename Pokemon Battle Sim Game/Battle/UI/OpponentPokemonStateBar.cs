@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pokemon_Battle_Sim_Game.Battle.Phases;
 using Pokemon_Battle_Sim_Game.Battle.Phases.PlayerPhases;
 using Pokemon_Battle_Sim_Game.Pokemons;
 
@@ -9,7 +10,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
     {
         private double directionCounter;
         private bool isGoingUp;
-        private static int CurrentHp => PickAttackPhase.currentOpponentHp;
+        private static int CurrentMaxHp => GlobalBattleVariables.EnemyInstance.EnemyMaxHp;
 
         public OpponentPokemonStateBar()
         {
@@ -31,9 +32,17 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(enemyBarTexture, new Rectangle((int)BasePosition.X, (int)BasePosition.Y, DefaultBarWidth, DefaultBarHeight), Color.White);
-            spriteBatch.DrawString(font, GlobalPokemon.EnemyInstance.EnemyPokemonName, new Vector2(BasePosition.X + 2, BasePosition.Y + 5), Color.Black);
-            spriteBatch.DrawString(font, $"Lv{GlobalPokemon.EnemyInstance.EnemyLevel}", new Vector2(BasePosition.X + 72, BasePosition.Y + 5), Color.Black);
-            spriteBatch.DrawString(font, $"{CurrentHp} / {GlobalPokemon.EnemyInstance.EnemyHp}", new Vector2(BasePosition.X + 40, BasePosition.Y + 12), Color.Black);
+            spriteBatch.DrawString(font, GlobalBattleVariables.EnemyInstance.EnemyPokemonName, new Vector2(BasePosition.X + 2, BasePosition.Y + 5), Color.Black);
+            spriteBatch.DrawString(font, $"Lv{GlobalBattleVariables.EnemyInstance.EnemyLevel}", new Vector2(BasePosition.X + 72, BasePosition.Y + 5), Color.Black);
+            if (GlobalBattleVariables.PlayerInstance.PlayerMaxHp >= 0 && !AttackPhase.IsAttackPhase)
+            {
+                spriteBatch.DrawString(font, $"{GlobalBattleVariables.EnemyInstance.EnemyMaxHp} / {GlobalBattleVariables.EnemyInstance.EnemyMaxHp}", new Vector2(BasePosition.X + 40, BasePosition.Y + 12), Color.Black);
+            }
+            else
+            {
+                spriteBatch.DrawString(font, $"{GlobalBattleVariables.CurrentOpponentHp} / {GlobalBattleVariables.EnemyInstance.EnemyMaxHp}", new Vector2(BasePosition.X + 40, BasePosition.Y + 12), Color.Black);
+
+            }
             HpBar.Draw(spriteBatch, BasePosition);
         }
     }

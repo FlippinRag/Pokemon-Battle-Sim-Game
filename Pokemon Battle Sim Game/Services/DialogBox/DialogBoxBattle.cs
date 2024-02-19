@@ -13,5 +13,9 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox
         {
             Texture = contentLoader.LoadTexture("Windows/DialogBox");
         }
+        public override void UnloadContent(IContentLoader contentLoader)
+        {
+            contentLoader.UnloadTexture("Windows/DialogBox");
+        }
     }
 }

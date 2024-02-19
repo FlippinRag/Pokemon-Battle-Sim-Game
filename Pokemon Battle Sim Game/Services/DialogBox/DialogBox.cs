@@ -34,6 +34,10 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox
             if (Texture == null) return;
             spriteBatch.Draw(Texture, new Rectangle((int)Pos.X, (int)Pos.Y, Width, height), Color.White);
         }
+
+        public virtual void UnloadContent(IContentLoader contentLoader)
+        {
+        }
     }
 
 }

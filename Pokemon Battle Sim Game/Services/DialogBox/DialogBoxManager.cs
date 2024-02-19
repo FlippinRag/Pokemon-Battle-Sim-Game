@@ -24,7 +24,7 @@ public class DialogBoxManager
         ShowNextBoxInQueue();
     }
 
-    private void ShowNextBoxInQueue()
+    public void ShowNextBoxInQueue()
     {
         if (!dialogBoxQueue.Any() || currentDialogBox != null) return;
         currentDialogBox = dialogBoxQueue.Dequeue();

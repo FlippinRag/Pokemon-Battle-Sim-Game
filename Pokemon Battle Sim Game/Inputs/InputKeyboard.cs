@@ -10,10 +10,8 @@ namespace Pokemon_Battle_Sim_Game.Inputs
         private Keys previousKey;
         private readonly Dictionary<Keys, Enumerables.Inputs> keyInputMap = new()
         {
-            { Keys.S, Enumerables.Inputs.Box1 },
-            { Keys.D, Enumerables.Inputs.Box2 },
-            { Keys.X, Enumerables.Inputs.Box3 },
-            { Keys.C, Enumerables.Inputs.Box4 },
+            { Keys.D1, Enumerables.Inputs.Choice1 },
+            { Keys.D2, Enumerables.Inputs.Choice2 },
             { Keys.Down, Enumerables.Inputs.DownArrow }
         };
 

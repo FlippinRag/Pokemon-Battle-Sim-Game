@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Pokemon_Battle_Sim_Game.Pokemons;
 
 public class PokemonApiRepository : IPokemonRepository
 {
-    private readonly HttpClient _httpClient = new();
+    private static readonly HttpClient _httpClient = new();
     private const string ApiBaseUrl = "http://localhost:8080";
 
     public async Task<PlayerPokemon> GetPlayerPokemonById(int playerPokemonId)
@@ -77,6 +78,42 @@ public class PokemonApiRepository : IPokemonRepository
         {
             Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             return null;
+        }
+    }
+    
+    public static async Task<bool> UpdatePlayerPokemonStats(int playerPokemonId, int playerXP, int playerLevel, int playerHP, int evolution, string playerPokemonName)
+    {
+        try
+        {
+            var data = new Dictionary<string, string>
+            {
+                { "playerPokemonID", playerPokemonId.ToString() },
+                { "playerXP", playerXP.ToString() },
+                { "playerLevel", playerLevel.ToString() },
+                { "playerHP", playerHP.ToString() },
+                { "evolution", evolution.ToString() },
+                { "playerPokemonName", playerPokemonName }
+            };
+
+            var response = await _httpClient.PostAsync($"{ApiBaseUrl}/updatePokemonStats", new FormUrlEncodedContent(data));
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Pokemon stats updated successfully!");
+                return true;
+            }
+
+            Console.WriteLine($"Error: {response.StatusCode}");
+            return false;
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine($"HTTP request failed: {ex.Message}");
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            return false;
         }
     }
 

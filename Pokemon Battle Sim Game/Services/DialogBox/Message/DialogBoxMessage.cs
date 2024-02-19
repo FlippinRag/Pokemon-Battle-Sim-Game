@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pokemon_Battle_Sim_Game.Battle;
 using Pokemon_Battle_Sim_Game.EventArg;
 using Pokemon_Battle_Sim_Game.Inputs;
+using Pokemon_Battle_Sim_Game.Pokemons;
 using Pokemon_Battle_Sim_Game.Services.Content;
 
 namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
@@ -14,29 +16,96 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
         private const int MaxNumberOfRows = 2; 
         private readonly string text;
         private readonly Input input;
+        private readonly string CurrentStatus;
         private Vector2 margin;
         private List<DialogPage> pages;
         private int pageIndex;
 
         protected static Color FontColor { get; set; }
-        public SpriteFont Font { get; set; }
+        private SpriteFont Font { get; set; }
+        // public static string PlayerPokemonMoveChoice { get; set; }
+        public static bool IsMove1 { get; set; }
+        public static bool IsHeal { get; set; }
+        public static bool IsPlayerChoiceMade { get; set; }
 
 
-        public DialogBoxMessage(Vector2 pos, int width, int height, string text, Input input) : base(pos, width, height)
+
+        protected DialogBoxMessage(Vector2 pos, int width, int height, string text, Input input, string CurrentStatus) : base(pos, width, height)
         {
             this.text = text;
             this.input = input;
+            this.CurrentStatus = CurrentStatus;
             this.input.NewInput += InputOnNewInput;
             pages = new List<DialogPage>();
             pageIndex = 0; 
             margin = new Vector2(10);
             FontColor = Color.Black;
-            //var dialogBoxMessage = new DialogBoxMessage(new Vector2(10, 30), 400, 200, "", new InputKeyboard());
         }
 
         private void InputOnNewInput(object sender, NewInputEvent newInputEvent)
         {
-            if (newInputEvent.Inputs != Enumerables.Inputs.DownArrow) return;
+            switch (CurrentStatus)
+            {
+                case "MessageNavigation":
+                    if (newInputEvent.Inputs == Enumerables.Inputs.DownArrow)
+                    {
+                        HandlePageNavigation();
+                    }
+                    break;
+                case "BattlePick":
+                    switch (newInputEvent.Inputs)
+                    {
+                        case Enumerables.Inputs.Choice1:
+                            GlobalBattleVariables.PlayerAction = "Fight";
+                            Console.WriteLine(GlobalBattleVariables.PlayerAction);
+                            HandlePageNavigation();
+                            break;
+                        case Enumerables.Inputs.Choice2:
+                            GlobalBattleVariables.PlayerAction = "Run";
+                            Console.WriteLine(GlobalBattleVariables.PlayerAction);
+                            HandlePageNavigation();
+                            break;
+                        case Enumerables.Inputs.DownArrow:
+                            pages[pageIndex].SpeedUpText();
+                            break;
+                        case Enumerables.Inputs.None:
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                    break;
+                case "MovePick":
+                    switch (newInputEvent.Inputs)
+                    {
+                        case Enumerables.Inputs.Choice1:
+                            IsMove1 = true;
+                            IsPlayerChoiceMade = true;
+                            Console.WriteLine(GlobalBattleVariables.PlayerPokemonMove);
+                            HandlePageNavigation();
+                            break;
+                        case Enumerables.Inputs.Choice2:
+                            IsHeal = true;
+                            IsPlayerChoiceMade = true;
+                            Console.WriteLine("Heal");
+                            HandlePageNavigation();
+                            break;
+                        case Enumerables.Inputs.DownArrow:
+                            pages[pageIndex].SpeedUpText();
+                            break;
+                        case Enumerables.Inputs.None:
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                    
+                    break;
+                
+            }
+        }
+
+
+        private void HandlePageNavigation()
+        {
             if (pages[pageIndex].IsDone)
             {
                 pageIndex++;

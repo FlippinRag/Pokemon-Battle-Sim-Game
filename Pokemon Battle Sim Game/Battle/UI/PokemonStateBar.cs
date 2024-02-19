@@ -14,7 +14,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
         protected SpriteFont font;
         protected Vector2 BasePosition;
         protected Vector2 HPbarPosition;
-        public HealthBar HpBar { get; } = new(GlobalPokemon.PlayerInstance.PlayerHp, GlobalPokemon.PlayerInstance.PlayerHp);
+        public HealthBar HpBar { get; } = new(GlobalBattleVariables.CurrentPlayerHp, GlobalBattleVariables.PlayerInstance.PlayerMaxHp);
 
         public void LoadContent(IContentLoader contentLoader)
         {

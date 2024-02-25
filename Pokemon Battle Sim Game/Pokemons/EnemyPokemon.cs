@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Pokemon_Battle_Sim_Game.Pokemons;
 
-public class EnemyPokemon
+public class EnemyPokemon // contains the enemy's pokemon's stats and methods for calculating the damage and special move
 {
     [JsonProperty("enemyPokemonID")]
     public int EnemyPokemonID { get; set; }

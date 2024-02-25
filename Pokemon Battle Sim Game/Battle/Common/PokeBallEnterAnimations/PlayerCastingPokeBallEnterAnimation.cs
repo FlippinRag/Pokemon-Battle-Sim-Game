@@ -2,20 +2,14 @@
 
 namespace Pokemon_Battle_Sim_Game.Battle.Common.PokeBallEnterAnimations
 {
-    public class PlayerCastingPokeBallEnterAnimation : IPokeBallEnterAnimation
+    public class PlayerCastingPokeBallEnterAnimation : IPokeBallEnterAnimation // casting pokeball to enter spinning
     {
         private const int MovementDelayTime = 100;
-        private Vector2 speed;
-        private double counter;
+        private Vector2 speed = new(5f, -1.5f);
+        private double counter = 0;
 
 
         public bool IsDone { get; set; }
-
-        public PlayerCastingPokeBallEnterAnimation()
-        {
-            speed = new Vector2(5f, -1.5f);
-            counter = 0;
-        }
 
         public void Update(double gameTime, PokeBallData pokeBallData)
         {

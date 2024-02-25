@@ -5,7 +5,7 @@ using static Pokemon_Battle_Sim_Game.Pokemons.Battle.PokemonSpriteData;
 
 namespace Pokemon_Battle_Sim_Game.Pokemons.Battle
 {
-    public class PokemonSprite : IPokemonSprite, IPokemonSpriteData
+    public class PokemonSprite : IPokemonSprite
     {
         private Texture2D texture;
         private readonly PokemonSpriteData pokemonSpriteData;

@@ -2,9 +2,9 @@
 
 namespace Pokemon_Battle_Sim_Game.Battle.PlayerSprites
 {
-    public class PlayerOpponentSprite : PlayerSprite
-    {
-        public PlayerOpponentSprite(string textureName) : base(textureName)
+    public class OpponentSprite : PokemonSprite
+    {// opponent moving in and out of battle
+        public OpponentSprite(string textureName) : base(textureName)
         {
             CurrentPosition = new Vector2(-64, 10);
             TargetPosition = new Vector2(165, 10);

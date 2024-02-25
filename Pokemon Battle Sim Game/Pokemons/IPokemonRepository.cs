@@ -6,5 +6,4 @@ public interface IPokemonRepository
 {
     Task<PlayerPokemon> GetPlayerPokemonById(int playerPokemonId);
     Task<EnemyPokemon> GetEnemyPokemonById(int enemyPokemonId);
-    // Define other methods as needed
 }

@@ -12,7 +12,7 @@ using Pokemon_Battle_Sim_Game.Services.Content;
 namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 {
     public class DialogBoxMessage : DialogBox
-    {
+    { // This class is responsible for the message box that appears in the game and how its displayed letter by letter, aswell as skipping the text with down key
         private const int MaxNumberOfRows = 2; 
         private readonly string text;
         private readonly Input input;
@@ -23,7 +23,6 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 
         protected static Color FontColor { get; set; }
         private SpriteFont Font { get; set; }
-        // public static string PlayerPokemonMoveChoice { get; set; }
         public static bool IsMove1 { get; set; }
         public static bool IsHeal { get; set; }
         public static bool IsPlayerChoiceMade { get; set; }
@@ -109,11 +108,9 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
             if (pages[pageIndex].IsDone)
             {
                 pageIndex++;
-                if (pageIndex >= pages.Count)
-                {
-                    IsDone = true;
-                    input.NewInput -= InputOnNewInput;
-                }
+                if (pageIndex < pages.Count) return;
+                IsDone = true;
+                input.NewInput -= InputOnNewInput;
             }
             else
             {
@@ -191,11 +188,9 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (!IsDone)
-            {
-                base.Draw(spriteBatch);
-                pages[pageIndex].Draw(spriteBatch);
-            }
+            if (IsDone) return;
+            base.Draw(spriteBatch);
+            pages[pageIndex].Draw(spriteBatch);
         }
 
     }

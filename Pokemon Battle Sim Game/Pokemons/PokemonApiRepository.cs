@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace Pokemon_Battle_Sim_Game.Pokemons;
 
 public class PokemonApiRepository : IPokemonRepository
-{
+{ // class is a repository for the Pokemon API and is responsible for getting the player and enemy Pokemon stats and updating the player Pokemon stats, storing it in global variables so it can be changed for later.
     private static readonly HttpClient _httpClient = new();
     private const string ApiBaseUrl = "http://localhost:8080";
 
@@ -116,7 +116,5 @@ public class PokemonApiRepository : IPokemonRepository
             return false;
         }
     }
-
-
-    // Other repository methods can be implemented here
+    
 }

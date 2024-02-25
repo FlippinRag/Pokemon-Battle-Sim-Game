@@ -7,7 +7,7 @@ using Pokemon_Battle_Sim_Game.Services.DialogBox;
 
 namespace Pokemon_Battle_Sim_Game.Battle.Phases
 {
-    public interface IPhase
+    public interface IPhase //phases of the battle in sequenceable order
     {
         bool IsDone { get; }
         void LoadContent(IContentLoader contentLoader, IDialogBoxQueuer dialogBoxQueuer, BattleData battleData);

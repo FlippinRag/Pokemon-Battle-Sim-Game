@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Pokemon_Battle_Sim_Game.Services.Content
 {
     public class ContentLoader : IContentLoader
-    {
+    { // This class is responsible for loading the content of the game
         private const string TextureNotFound = "NotFoundTexture";
         private const string FontNotFound = "NotFoundFont";
         private readonly ContentManager mainContentManager;
@@ -37,19 +37,10 @@ namespace Pokemon_Battle_Sim_Game.Services.Content
             }
             catch (Exception) when (textureName != TextureNotFound)
             {
-                return LoadTexture(TextureNotFound);
+                return LoadTexture(TextureNotFound); // If the texture is not found, load the default texture
             }
         }
 
-        public void UnloadTexture(string textureName)
-        {
-            if (contentManagers.TryGetValue(textureName, out var contentManager))
-            {
-                contentManager.Unload();
-                contentManagers.Remove(textureName);
-                textures.Remove(textureName);
-            }
-        }
 
         public SpriteFont LoadFont(string fontName)
         {
@@ -73,7 +64,7 @@ namespace Pokemon_Battle_Sim_Game.Services.Content
             }
             catch (Exception) when (fontName != FontNotFound)
             {
-                return LoadFont(FontNotFound);
+                return LoadFont(FontNotFound); // If the font is not found, load the default font
             }
         }
     }

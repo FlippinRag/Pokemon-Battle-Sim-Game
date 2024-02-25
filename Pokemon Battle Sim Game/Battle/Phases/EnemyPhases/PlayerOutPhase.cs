@@ -8,13 +8,13 @@ using Pokemon_Battle_Sim_Game.Services.DialogBox;
 
 namespace Pokemon_Battle_Sim_Game.Battle.Phases.EnemyPhases
 {
-    public abstract class PlayerOutPhase<TTrainerSprite> : IPhase where TTrainerSprite : PlayerSprite
+    public abstract class PlayerOutPhase<TTrainerSprite> : IPhase where TTrainerSprite : PokemonSprite
     {
-        protected readonly List<PlayerSprite> TrainerSprites;
+        protected readonly List<PokemonSprite> TrainerSprites;
         public bool IsDone { get; protected set; }
 
 
-        protected PlayerOutPhase(List<PlayerSprite> trainerSprites)
+        protected PlayerOutPhase(List<PokemonSprite> trainerSprites)
         {
             TrainerSprites = trainerSprites;
         }

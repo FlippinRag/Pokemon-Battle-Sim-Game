@@ -86,4 +86,3 @@ C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim G
 C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Content\Snorlax.xnb
 C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Content\Venusaur.xnb
 C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\bin\Debug\net6.0\Content\Wartortle.xnb
-C:\Users\Anurag Sedai\RiderProjects\Pokemon Battle Sim Game\Pokemon Battle Sim Game\obj\Debug\net6.0\Pokemon Battle Sim Game.sourcelink.json

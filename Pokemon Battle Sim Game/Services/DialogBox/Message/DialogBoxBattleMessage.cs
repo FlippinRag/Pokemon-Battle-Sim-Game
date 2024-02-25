@@ -3,7 +3,7 @@ using Pokemon_Battle_Sim_Game.Inputs;
 
 namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 {
-    public class DialogBoxBattleMessage : DialogBoxMessage
+    public class DialogBoxBattleMessage : DialogBoxMessage // intermediate for passing text and statuses for displaying the battle messages
     {
         public DialogBoxBattleMessage(string text, Input input, string currentStatus) : base(new Vector2(10, 113), 280, 45, text, input, currentStatus)
         {

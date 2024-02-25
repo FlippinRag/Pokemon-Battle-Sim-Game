@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Pokemon_Battle_Sim_Game.Battle.Common;
@@ -14,20 +13,21 @@ using Pokemon_Battle_Sim_Game.Pokemons.Battle.PokemonEnteranceAnimations;
 using Pokemon_Battle_Sim_Game.Services.Content;
 using Pokemon_Battle_Sim_Game.Services.DialogBox;
 using Pokemon_Battle_Sim_Game.Services.DialogBox.Message;
+using PokemonSprite = Pokemon_Battle_Sim_Game.Battle.PlayerSprites.PokemonSprite;
 
 namespace Pokemon_Battle_Sim_Game.Battle.Phases.PlayerPhases
 {
-    public class PlayerPlayerOutPhase : PlayerOutPhase<PlayerPlayerSprite>
+    public class PlayerPokemonOutPhase : PlayerOutPhase<PlayerSprite>
     {
         private readonly IPokemonSprite opponentPokemonSprite;
         private readonly IPokemonSprite pokemonSpriteTest;
         private readonly PokeBall pokeBall;
         private IPokemonRepository _pokemonRepository;
 
-        public PlayerPlayerOutPhase(List<PlayerSprite> trainerSprites, IPokemonSprite opponentPokemonSprite) : base(trainerSprites)
+        public PlayerPokemonOutPhase(List<PokemonSprite> trainerSprites, IPokemonSprite opponentPokemonSprite) : base(trainerSprites)
         {
             this.opponentPokemonSprite = opponentPokemonSprite;
-            PokemonSprite pokemonSpriteTest = new PokemonSprite(new PokemonSpriteData(0, 0, new Vector2(50, 210), $"Pokemons/PlayerPokemons/{GlobalBattleVariables.PlayerInstance.PlayerPokemonName}"));
+            Pokemons.Battle.PokemonSprite pokemonSpriteTest = new Pokemons.Battle.PokemonSprite(new PokemonSpriteData(0, 0, new Vector2(50, 210), $"Pokemons/PlayerPokemons/{GlobalBattleVariables.PlayerInstance.PlayerPokemonName}"));
             pokeBall = new PokeBall(new PokeBallData(new Vector2(0, 70), "Battle/Pokeballs/pokeball_regular"), new PlayerCastingPokeBallEnterAnimation(), new GrowPokemonEntranceAnimation(pokemonSpriteTest.GetPokemonBattleSpriteData()));
             this.pokemonSpriteTest = pokemonSpriteTest;
         }

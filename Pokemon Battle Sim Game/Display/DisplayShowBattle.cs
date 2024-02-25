@@ -9,23 +9,19 @@ using Pokemon_Battle_Sim_Game.Services.DialogBox;
 namespace Pokemon_Battle_Sim_Game.Display
 {
     public class DisplayShowBattle : Display
-    {
+    { // This class is responsible for displaying the battle and being part of the queue of the dialog boxes
         private IContentLoader contentLoader;
         private readonly IDialogBoxQueuer dialogBoxQueuer;
         private IPhase currentPhase;
         private readonly BattleData battleData;
         private readonly DialogBoxBattle dialogBoxBattle;
         private Texture2D backgroundTexture;
-        public SpriteFont Font { get; set; }
-        private bool drawPlainMessages;
-
         public DisplayShowBattle(IDialogBoxQueuer dialogBoxQueuer, IPhase startPhase, BattleData battleData)
         {
             this.dialogBoxQueuer = dialogBoxQueuer;
             this.battleData = battleData;
             currentPhase = startPhase;
             dialogBoxBattle = new DialogBoxBattle(new Vector2(-30, 98), 300, 80);
-            drawPlainMessages = false;
         }
 
         public override void LoadContent(IContentLoader contentLoader)
@@ -34,7 +30,6 @@ namespace Pokemon_Battle_Sim_Game.Display
             dialogBoxBattle.LoadContent(contentLoader);
             currentPhase.LoadContent(contentLoader, dialogBoxQueuer, battleData);
             this.contentLoader = contentLoader;
-            Font = contentLoader.LoadFont("PokemonFont");
         }
 
         public override void Update(double gameTime)
@@ -51,20 +46,6 @@ namespace Pokemon_Battle_Sim_Game.Display
             spriteBatch.Draw(backgroundTexture, new Rectangle(0, -20, 240, 160), Color.White);
             currentPhase.Draw(spriteBatch, null);
             dialogBoxBattle.Draw(spriteBatch);
-            
-            // Draw plain messages if drawPlainMessages is true
-            if (currentPhase is StartBattleMessagePhase playerMessagePhase && playerMessagePhase.IsDone)
-            {
-                DrawPlainMessages(spriteBatch, Font);
-            }
-        }
-
-        // Method to draw plain messages
-        private static void DrawPlainMessages(SpriteBatch spriteBatch, SpriteFont font)
-        {
-            spriteBatch.DrawString(font, "What is your action?", new Vector2(0, 130), Color.Black);
-            spriteBatch.DrawString(font, "1. Fight", new Vector2(0, 140), Color.Black);
-            spriteBatch.DrawString(font, "2. Run", new Vector2(0, 150), Color.Black);
         }
     }
 }

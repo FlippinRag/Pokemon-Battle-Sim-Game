@@ -6,7 +6,7 @@ using Pokemon_Battle_Sim_Game.Services.Content;
 namespace Pokemon_Battle_Sim_Game.Display
 {
     public class DisplayLoader
-    {
+    { //loads the display and transitions between them with a fade in and fade out
         private Display currentDisplay;
         private Display nextDisplay;
         private readonly IDisplayTransition fadeOutTransition;
@@ -44,12 +44,6 @@ namespace Pokemon_Battle_Sim_Game.Display
             fadeOutTransition.LoadContent(contentLoader);
             fadeInTransition.LoadContent(contentLoader);
         }
-        
-        public void BeginClosingProcess()
-        {
-            currentDisplayLoaderPhase = DisplayLoaderPhases.ClosingPreviousDisplay;
-            fadeOutTransition.Start();
-        }
 
         public void Update(double gameTime)
         {
@@ -67,13 +61,10 @@ namespace Pokemon_Battle_Sim_Game.Display
                     {
                         if (currentDisplay != null)
                         {
-                            // Close the game when the transition is done
                             Environment.Exit(0);
                         }
                         else
                         {
-                            // If CurrentDisplay is null, it means the game just started
-                            // So, we prepare the new display instead of closing the game
                             SetupNextDisplay();
                         }
                     }

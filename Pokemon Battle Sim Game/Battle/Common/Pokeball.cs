@@ -26,7 +26,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.Common
         private double counter;
         private bool isOpen;
 
-        public bool IsDone { get; set; }
+        public bool IsDone { get; private set; }
 
         public PokeBall(PokeBallData pokeBallData, IPokeBallEnterAnimation pokeBallEnterAnimation, IPokemonEntranceAnimation pokemonEntranceAnimation)
         {
@@ -99,7 +99,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.Common
             if (IsDone) return; 
             spriteBatch.Draw(pokeballTexture, pokeBallData.Position, 
                 new Rectangle(PokeBallData.PokeballWidth * (isOpen ? 1 : 0), 0, PokeBallData.PokeballWidth, PokeBallData.PokeballHeight), pokeBallData.Color,
-                pokeBallData.Rotation, new Vector2(PokeBallData.PokeballWidth/2, PokeBallData.PokeballHeight/2), Vector2.One, SpriteEffects.None, 0);
+                pokeBallData.Rotation, new Vector2(6F, 6F), Vector2.One, SpriteEffects.None, 0);
             pokeballOpenEffects.ForEach(p => p.Draw(spriteBatch));
         }
     }

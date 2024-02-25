@@ -7,10 +7,9 @@ using Pokemon_Battle_Sim_Game.Pokemons;
 namespace Pokemon_Battle_Sim_Game.Battle.UI
 {
     public class OpponentPokemonStateBar : PokemonStateBar
-    {
+    { //class for enemy status bar
         private double directionCounter;
         private bool isGoingUp;
-        private static int CurrentMaxHp => GlobalBattleVariables.EnemyInstance.EnemyMaxHp;
 
         public OpponentPokemonStateBar()
         {

@@ -7,10 +7,10 @@ using Pokemon_Battle_Sim_Game.Pokemons;
 namespace Pokemon_Battle_Sim_Game.Battle.UI
 {
     public class PlayerPokemonStateBar : PokemonStateBar
-    {
+    { // health bar for the player
         private double directionCounter;
         private bool isGoingUp;
-        private static int CurrentHp => GlobalBattleVariables.PlayerInstance.PlayerMaxHp;
+
         public PlayerPokemonStateBar()
         {
             BasePosition = new Vector2(130, 70);
@@ -19,7 +19,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
 
         public override void Update(double gameTime)
         {
-            base.Update(gameTime);
+            base.Update(gameTime); //shimmeys around up and down a little bit
             directionCounter += gameTime;
             if (!(directionCounter > 500)) return;
             BasePosition.Y += isGoingUp ? 1 : -1;
@@ -34,7 +34,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
             spriteBatch.DrawString(font, GlobalBattleVariables.PlayerInstance.PlayerPokemonName, new Vector2(BasePosition.X + 18, BasePosition.Y + 4), Color.Black);
             spriteBatch.DrawString(font, $"Lv{GlobalBattleVariables.PlayerInstance.PlayerLevel}", new Vector2(BasePosition.X + 87, BasePosition.Y + 4), Color.Black);
             if (GlobalBattleVariables.PlayerInstance.PlayerMaxHp >= 0 && !AttackPhase.IsAttackPhase)
-            {
+            { //if the value is 0 because its drawn before currenthp is initialised, then make it max until it needs to be changed
                 spriteBatch.DrawString(font,$"{GlobalBattleVariables.PlayerInstance.PlayerMaxHp} / {GlobalBattleVariables.PlayerInstance.PlayerMaxHp}", new Vector2(BasePosition.X + 67, BasePosition.Y + 22), Color.Black);
             }
             else

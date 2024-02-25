@@ -3,7 +3,7 @@ using Pokemon_Battle_Sim_Game.EventArg;
 
 namespace Pokemon_Battle_Sim_Game.Inputs
 {
-    public abstract class Input
+    public abstract class Input //Handles which inputs to send to the game
     {
         private static bool IsInputLocked => false;
 

@@ -29,7 +29,7 @@ public class AttackPhase : IPhase
     public bool IsDone { get; private set; }
     public static bool IsAttackPhase { get; private set; }
     private readonly float randomiserDMG;
-    Dictionary<string, string> pokemonMoves = new()
+    Dictionary<string, string> pokemonMoves = new() //dictionary of pokemon and their respective moves
     {
         { "Charmander", "Ember" },
         { "Charmeleon", "Fire Fang" },
@@ -45,7 +45,7 @@ public class AttackPhase : IPhase
         { "Mega Lucario", "Close Combat" }
     };
     
-    Dictionary<string, string> evolutionMap = new()
+    Dictionary<string, string> evolutionMap = new() //dictionary of pokemon and their respective evolutions
     {
         { "Charmander", "Charmeleon" },
         { "Charmeleon", "Charizard" },
@@ -262,7 +262,6 @@ public class AttackPhase : IPhase
 
     public IPhase GetNextPhase()
     {
-
         return null;
     }
 

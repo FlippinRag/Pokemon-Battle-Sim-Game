@@ -3,7 +3,7 @@ using Pokemon_Battle_Sim_Game.Services.Content;
 
 namespace Pokemon_Battle_Sim_Game.Display
 {
-    public abstract class Display
+    public abstract class Display //abstract class for all displays
     {
         public abstract void LoadContent(IContentLoader contentLoader);
         public abstract void Update(double gameTime);

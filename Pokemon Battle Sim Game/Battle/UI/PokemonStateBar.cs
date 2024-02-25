@@ -6,7 +6,7 @@ using Pokemon_Battle_Sim_Game.Services.Content;
 namespace Pokemon_Battle_Sim_Game.Battle.UI
 {
     public abstract class PokemonStateBar
-    {
+    {// this is a abstract class for the health bar of the player and the enemy
         protected const int DefaultBarWidth = 110;
         protected const int DefaultBarHeight = 40;
         protected Texture2D enemyBarTexture;

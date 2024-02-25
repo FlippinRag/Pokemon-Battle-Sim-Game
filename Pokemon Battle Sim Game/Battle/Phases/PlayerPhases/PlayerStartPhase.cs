@@ -8,24 +8,24 @@ using Pokemon_Battle_Sim_Game.Services.DialogBox;
 
 namespace Pokemon_Battle_Sim_Game.Battle.Phases.PlayerPhases
 {
-    public class PlayerStartPhase : IPhase
+    public class PlayerStartPhase : IPhase // start of player sprites
     {
-        private List<PlayerSprite> playerSprites;
+        private List<PokemonSprite> playerSprites;
         public bool IsDone { get; set; }
 
         public void LoadContent(IContentLoader contentLoader, IDialogBoxQueuer dialogBoxQueuer, BattleData battleData)
         {
-            playerSprites = new List<PlayerSprite>
+            playerSprites = new List<PokemonSprite>
             {
-                new PlayerOpponentSprite(battleData.Opponent.TextureName),
-                new PlayerPlayerSprite("Trainers/trainer_back")
+                new OpponentSprite(battleData.Opponent.TextureName),
+                new PlayerSprite("Trainers/trainer_back")
             };
-            playerSprites.ForEach(t => t.LoadContent(contentLoader));
+            playerSprites.ForEach(t => t.LoadContent(contentLoader)); // load content for each sprite
         }
 
         public void Update(double gameTime)
         {
-            playerSprites.ForEach(t => t.Update(gameTime));
+            playerSprites.ForEach(t => t.Update(gameTime)); // update each sprite
             IsDone = playerSprites.TrueForAll(t => t.IsDone);
         }
 
@@ -36,7 +36,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.Phases.PlayerPhases
 
         public void Draw(SpriteBatch spriteBatch, IContentLoader contentLoader)
         {
-            playerSprites.ForEach(t => t.Draw(spriteBatch));
+            playerSprites.ForEach(t => t.Draw(spriteBatch)); // draw each sprite
         }
     }
 }

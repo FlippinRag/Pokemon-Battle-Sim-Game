@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
 {
     public class DialogPage
-    {
+    {// this class makes the pages for the message to be split into and read letter by letter
         private const int CharacterDelay = 75;
         private readonly SpriteFont font;
         private readonly Color fontColor;
@@ -40,7 +40,7 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox.Message
             }
         }
 
-        public void SpeedUpText()
+        public void SpeedUpText()  //goes to the end of the text, when you press down a key
         {
             index = fullText.Length;
             IsDone = true;

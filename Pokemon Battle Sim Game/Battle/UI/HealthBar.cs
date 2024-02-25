@@ -5,7 +5,7 @@ using Pokemon_Battle_Sim_Game.Services.Content;
 namespace Pokemon_Battle_Sim_Game.Battle.UI
 {
     public class HealthBar
-    {
+    {// class for health bar to become a percentage and change color depending on the health difference
         private int maxHp;
         private enum HealthBarState
         {
@@ -69,7 +69,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.UI
 
         public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
-            // if ()
+            // Draw the health bar colour as a percentage and take that out of the original sprite so that thats the only part that is drawn
             spriteBatch.Draw(hpBarTexture, new Rectangle((int)position.X + 44, (int)position.Y + 25, barWidth, 7), new Rectangle(0, 3 * (int)currentHealthBarState, 1, 3), Color.White);
         }
 

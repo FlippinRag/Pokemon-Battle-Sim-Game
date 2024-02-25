@@ -9,20 +9,21 @@ using Pokemon_Battle_Sim_Game.Pokemons.Battle;
 using Pokemon_Battle_Sim_Game.Pokemons.Battle.PokemonEnteranceAnimations;
 using Pokemon_Battle_Sim_Game.Services.Content;
 using Pokemon_Battle_Sim_Game.Services.DialogBox;
+using PokemonSprite = Pokemon_Battle_Sim_Game.Battle.PlayerSprites.PokemonSprite;
 
 namespace Pokemon_Battle_Sim_Game.Battle.Phases.EnemyPhases
 {
-    public class EnemyPlayerFirstPokemonPhase : IPhase
+    public class EnemyPokemonPhase : IPhase //draws enemy pokemon
     {
-        private readonly List<PlayerSprite> trainerSprites;
+        private readonly List<PokemonSprite> trainerSprites;
         private readonly PokeBall pokeBall;
         private readonly IPokemonSprite pokemonSpriteTest;
         public bool IsDone { get; private set; }
 
-        public EnemyPlayerFirstPokemonPhase(List<PlayerSprite> trainerSprites)
+        public EnemyPokemonPhase(List<PokemonSprite> trainerSprites)
         {
             this.trainerSprites = trainerSprites;
-            var pokemonSpriteTest = new PokemonSprite(new PokemonSpriteData(0, 0, new Vector2(165, 40), $"Pokemons/EnemyPokemons/{GlobalBattleVariables.EnemyInstance.EnemyPokemonName}"));
+            var pokemonSpriteTest = new Pokemons.Battle.PokemonSprite(new PokemonSpriteData(0, 0, new Vector2(165, 40), $"Pokemons/EnemyPokemons/{GlobalBattleVariables.EnemyInstance.EnemyPokemonName}"));
             pokeBall = new PokeBall(new PokeBallData(new Vector2(165, 55), "Battle/Pokeballs/pokeball_regular"), new NoPokeBallEnterAnimation(), new PokemonEntranceAnimation(pokemonSpriteTest.GetPokemonBattleSpriteData()));
             this.pokemonSpriteTest = pokemonSpriteTest;
         }
@@ -41,7 +42,7 @@ namespace Pokemon_Battle_Sim_Game.Battle.Phases.EnemyPhases
 
         public IPhase GetNextPhase()
         {
-            return new PlayerPlayerOutPhase(trainerSprites, pokemonSpriteTest);
+            return new PlayerPokemonOutPhase(trainerSprites, pokemonSpriteTest);
         }
 
         public void Draw(SpriteBatch spriteBatch, IContentLoader contentLoader)

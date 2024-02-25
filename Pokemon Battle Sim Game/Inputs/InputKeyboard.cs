@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Pokemon_Battle_Sim_Game.Inputs
 {
-    public class InputKeyboard : Input
+    public class InputKeyboard : Input //handles the input from the keyboard and what they map to using the enum
     {
         private KeyboardState keyboardCondition;
         private KeyboardState previousKeyboardCondition;

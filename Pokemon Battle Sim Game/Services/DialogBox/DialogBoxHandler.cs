@@ -2,11 +2,11 @@
 
 namespace Pokemon_Battle_Sim_Game.Services.DialogBox
 {
-    public class DialogBoxHandler : IDialogBoxQueuer
+    public class DialogBoxHandler : IDialogBoxQueuer // a helper class for the dialog box manager
     {
         private readonly DialogBoxManager dialogBoxManager;
 
-        public bool BoxActive => dialogBoxManager.BoxActive;
+        public bool BoxActive => dialogBoxManager.BoxActive; // gets if the dialog box is active, never sets it, learnt that the hard way
 
         public DialogBoxHandler(DialogBoxManager dialogBoxManager)
         {

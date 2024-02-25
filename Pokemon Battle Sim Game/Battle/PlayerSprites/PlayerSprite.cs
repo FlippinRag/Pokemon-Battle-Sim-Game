@@ -1,49 +1,43 @@
-﻿using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Pokemon_Battle_Sim_Game.Services.Content;
+﻿using Microsoft.Xna.Framework;
 
 namespace Pokemon_Battle_Sim_Game.Battle.PlayerSprites
 {
-    public abstract class PlayerSprite
-    {
-        protected const int PokemonTextureHeight = 64;
-        protected const int PokemonTextureWidth = 64;
+    public class PlayerSprite : PokemonSprite
+    {// sprite of the player moving into battle and animation of him throwing the pokeball
+        private const int AnimationFrameCount = 4;
+        private const int AnimationFrameTime = 100;
 
-        protected Rectangle DrawRectangle;
-        private Texture2D texture;
+        private double counter;
+        private int animationFrameIndex;
+        private int speed;
+        private bool inMovement; 
 
-        protected Vector2 TargetPosition;
-        private readonly string textureName;
-
-        public Vector2 CurrentPosition { get; protected set; }
-        public bool IsDone => Math.Abs(CurrentPosition.X - TargetPosition.X) < 5;
-
-        protected PlayerSprite(string textureName)
+        public PlayerSprite(string textureName) : base(textureName)
         {
-            this.textureName = textureName;
-            DrawRectangle = new Rectangle(0, 0, PokemonTextureWidth, PokemonTextureHeight);
+            CurrentPosition = new Vector2(240, 48);
+            TargetPosition = new Vector2(20, 48);
+            speed = 3;
+            inMovement = false;
+            animationFrameIndex = 0; 
         }
 
-        public void LoadContent(IContentLoader contentLoader)
+        protected override void Move(double gameTime)
         {
-            texture = contentLoader.LoadTexture(textureName);
+            CurrentPosition -= new Vector2(speed, 0);
+            if (!inMovement || animationFrameIndex >= AnimationFrameCount) return;
+            counter += gameTime;
+            if (!(counter > AnimationFrameTime)) return;
+            counter = 0;
+            animationFrameIndex++; 
+            DrawRectangle = new Rectangle(PokemonTextureWidth*animationFrameIndex, 0, PokemonTextureWidth, PokemonTextureHeight);
+
         }
 
-        public void Update(double gameTime)
+        public override void StartMovement()
         {
-            if (IsDone)
-                return;
-            Move(gameTime);
-        }
-
-        protected abstract void Move(double gameTime);
-
-        public abstract void StartMovement();
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(texture, CurrentPosition, DrawRectangle, Color.White);
+            TargetPosition = new Vector2(-64, 48);
+            speed = 1;
+            inMovement = true; 
         }
     }
 }

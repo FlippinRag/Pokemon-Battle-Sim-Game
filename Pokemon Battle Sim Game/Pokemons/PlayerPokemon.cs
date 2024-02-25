@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Pokemon_Battle_Sim_Game.Pokemons;
 
-public class PlayerPokemon
+public class PlayerPokemon // contains the player's pokemon's stats and methods for calculating the xp gain, required xp to level up and damage
 {
     [JsonProperty("playerPokemonID")]
     public int PlayerPokemonId { get; set; }

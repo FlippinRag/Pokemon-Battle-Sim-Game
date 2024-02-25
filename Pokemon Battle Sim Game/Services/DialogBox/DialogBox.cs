@@ -4,13 +4,13 @@ using Pokemon_Battle_Sim_Game.Services.Content;
 
 namespace Pokemon_Battle_Sim_Game.Services.DialogBox
 {
-    public class DialogBox
+    public class DialogBox 
     {
         protected Texture2D Texture;
         protected Vector2 Pos;
         protected Color Color { get; set; }
         protected readonly int Width;
-        protected readonly int height;
+        private readonly int height;
         public bool IsDone { get; protected set; }
         
 
@@ -33,10 +33,6 @@ namespace Pokemon_Battle_Sim_Game.Services.DialogBox
         {
             if (Texture == null) return;
             spriteBatch.Draw(Texture, new Rectangle((int)Pos.X, (int)Pos.Y, Width, height), Color.White);
-        }
-
-        public virtual void UnloadContent(IContentLoader contentLoader)
-        {
         }
     }
 

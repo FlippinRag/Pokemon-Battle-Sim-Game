@@ -28,18 +28,19 @@ namespace Pokemon_Battle_Sim_Game
 
         public PokemonGame(string playerPokemonID)
         {
+            // Initialize variables
             PlayerPokemonId = playerPokemonID;
             var graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
             Content.RootDirectory = "Content";
+            _pokemonRepository = new PokemonApiRepository();
             IContentLoader contentLoader = new ContentLoader(Content);
             var dialogBoxManager = new DialogBoxManager(contentLoader);
             windowhandler = new DialogBoxHandler(dialogBoxManager);
             displayloader = new DisplayLoader(new DisplayTransitionFadeOut(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 5),
-                new DisplayTransitionFadeIn(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 3), contentLoader);
-            displayloader.LoadNextDisplay(new DisplayShowBattle(windowhandler, new PlayerStartPhase(), new BattleData(new PlayerTestLoader().LoadPlayer(1),new PlayerTestLoader().LoadPlayer(1))));
-            _pokemonRepository = new PokemonApiRepository();
+                new DisplayTransitionFadeIn(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 3), contentLoader); // allows for the display to be loaded with transitions
+            displayloader.LoadNextDisplay(new DisplayShowBattle(windowhandler, new PlayerStartPhase(), new BattleData(PlayerTestLoader.LoadPlayer(1),PlayerTestLoader.LoadPlayer(1)))); // loading the opponent trainer
         }
         protected override async void LoadContent()
         {
@@ -52,28 +53,28 @@ namespace Pokemon_Battle_Sim_Game
             GlobalBattleVariables.PlayerInstance = playerPokemon;
             if (GlobalBattleVariables.PlayerInstance.PlayerLevel < 7)
             {
-                var randomEnemyId = random.Next(1, 4); // enemies from id 1, 2, 3
+                var randomEnemyId = random.Next(1, 4); //battle the enemies from id 1, 2, 3
                 var enemyPokemon = await _pokemonRepository.GetEnemyPokemonById(randomEnemyId);
                 Console.WriteLine($"Fetched Enemy Pokemon Data: ID= {enemyPokemon.EnemyPokemonID}, EnemyName= {enemyPokemon.EnemyPokemonName}, EnemyLevel= {enemyPokemon.EnemyLevel}, EnemyMaxHp= {enemyPokemon.EnemyMaxHp}");
                 GlobalBattleVariables.EnemyInstance = enemyPokemon;
             }
             else if (GlobalBattleVariables.PlayerInstance.PlayerLevel >= 7)
             {
-                var randomEnemyId = random.Next(1, 8); // enemies from id 1 - 7
+                var randomEnemyId = random.Next(1, 8); //battle the enemies from id 1 - 7
                 var enemyPokemon = await _pokemonRepository.GetEnemyPokemonById(randomEnemyId);
                 Console.WriteLine($"Fetched Enemy Pokemon Data: ID= {enemyPokemon.EnemyPokemonID}, EnemyName= {enemyPokemon.EnemyPokemonName}, EnemyLevel= {enemyPokemon.EnemyLevel}, EnemyMaxHp= {enemyPokemon.EnemyMaxHp}");
                 GlobalBattleVariables.EnemyInstance = enemyPokemon;
             }
             else if (GlobalBattleVariables.PlayerInstance.PlayerLevel >= 18)
             {
-                var randomEnemyId = random.Next(1, 11); // enemies from id  1 - 10
+                var randomEnemyId = random.Next(1, 11); //battle the enemies from id  1 - 10
                 var enemyPokemon = await _pokemonRepository.GetEnemyPokemonById(randomEnemyId);
                 Console.WriteLine($"Fetched Enemy Pokemon Data: ID= {enemyPokemon.EnemyPokemonID}, EnemyName= {enemyPokemon.EnemyPokemonName}, EnemyLevel= {enemyPokemon.EnemyLevel}, EnemyMaxHp= {enemyPokemon.EnemyMaxHp}");
                 GlobalBattleVariables.EnemyInstance = enemyPokemon;
             }
             else if (GlobalBattleVariables.PlayerInstance.PlayerLevel >= 30)
             {
-                var randomEnemyId = random.Next(1, 12); // enemies from id  1 - 11
+                var randomEnemyId = random.Next(1, 12); //battle the enemies from id  1 - 11
                 var enemyPokemon = await _pokemonRepository.GetEnemyPokemonById(randomEnemyId);
                 Console.WriteLine($"Fetched Enemy Pokemon Data from ZA MEWTWO: ID= {enemyPokemon.EnemyPokemonID}, EnemyName= {enemyPokemon.EnemyPokemonName}, EnemyLevel= {enemyPokemon.EnemyLevel}, EnemyMaxHp= {enemyPokemon.EnemyMaxHp}");
                 GlobalBattleVariables.EnemyInstance = enemyPokemon;
@@ -123,7 +124,7 @@ namespace Pokemon_Battle_Sim_Game
     {
         public static void Main()
         {
-            var game = new PokemonGame("1");
+            var game = new PokemonGame("1"); //test if WPF isn't available
             game.Window.AllowUserResizing = true;
             game.Run();
         }
